@@ -1,4 +1,4 @@
-﻿export async function createKlaviyoProfile(email: string, properties: Record<string, any>) {
+export async function createKlaviyoProfile(email: string, properties: Record<string, any>) {
   const apiKey = process.env.KLAYVIO_API_KEY!;
   const url = 'https://a.klaviyo.com/api/v2/list/members';
   const response = await fetch(url, {
@@ -6,7 +6,7 @@
     headers: {
       'Accept': 'application/json',
       'Content-Type': 'application/json',
-      'Authorization': Klaviyo-API-Key 
+      'Authorization': `Klaviyo-API-Key ${apiKey}`
     },
     body: JSON.stringify({
       api_key: apiKey,
@@ -21,7 +21,7 @@ export async function triggerKlaviyoFlow(email: string) {
   const flowId = process.env.KLAYVIO_FLOW_ID!;
   await fetch('https://a.klaviyo.com/api/v2/flow/webhook', {
     method: 'POST',
-    headers: { 'Authorization': Klaviyo-API-Key  },
+    headers: { 'Authorization': `Klaviyo-API-Key ${apiKey}` },
     body: JSON.stringify({ email, flow_id: flowId })
   });
 }
