@@ -3,9 +3,9 @@
 Funil Quiz → Score → Lead → App → Retenção
 
 ## Domínios
-- quiz.faithjourney.atlasystem.online → Lovable quiz
-- app.faithjourney.atlasystem.online → Lovable app
-- api.faithjourney.atlasystem.online → Vercel
+- quiz.faithjourney.atlasystems.online → Lovable quiz
+- app.faithjourney.atlasystems.online → Lovable app
+- api.faithjourney.atlasystems.online → Vercel
 
 ## Deploy
 1. Push para GitHub
